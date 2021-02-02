@@ -1,0 +1,366 @@
+@import url(./font.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*---------Global Classes-----------*/
+:root {
+  --Sansita: "Sansita", cursive;
+  --Courgette: "Courgette", cursive;
+  --Abel: "Abel", cursive;
+  --Livvic: "Livvic", cursive;
+  --Poppins: "Poppins", cursive;
+  --Averia_Serif_Libre: "Averia_Serif_Libre", cursive;
+  --Bangers: "Bangers", cursive;
+  --Be_Vietnam: "Be_Vietnam", cursive;
+  --Kaushan_Script: "Kaushan_Script", cursive;
+  --Special_Elite: "Special_Elite", cursive;
+  --Roboto: "Roboto", cursive;
+  --East_Sea_Dokdo: "East_Sea_Dokdo", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+.content {
+  max-width: 1350px;
+  padding: 0 2rem;
+  margin: auto;
+}
+/*----x-----Global Classes-----x------*/
+
+/*---------Preloader-----------*/
+.preloader {
+  width: 100%;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 9999;
+}
+.preloader .preloader-text {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../image1.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: var(--East_Sea_Dokdo);
+  font-size: 6rem;
+  text-align: center;
+  line-height: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  position: absolute;
+  color: rgb(92, 3, 45);
+  pointer-events: none;
+  -webkit-background-clip: text;
+  animation: animate 1s infinite, animate1 10s forwards;
+}
+@keyframes animate {
+  0% {
+    background-image: url(../pexels-stas-knop-1626481.jpg);
+  }
+  10% {
+    background-image: url(../image3.jpg);
+  }
+  20% {
+    background-image: url(../image4.jpg);
+  }
+  30% {
+    background-image: url(../image5.jpg);
+  }
+  40% {
+    background-image: url(../image6.jpg);
+  }
+  50% {
+    background-image: url(../image7.jpg);
+  }
+  60% {
+    background-image: url(../image8.jpg);
+  }
+  70% {
+    background-image: url(../image9.jpg);
+  }
+  80% {
+    background-image: url(../image10.jpg);
+  }
+  90% {
+    background-image: url(../image11.jpg);
+  }
+}
+@keyframes animate1{
+  from {
+    color: rgb(26, 26, 26);
+  }
+  to {
+    color: transparent;
+  }
+}
+/*-----x----Preloader------x-----*/
+
+/*--------------Navigation Bar--------------*/
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 5;
+}
+.navbar .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar .brand a {
+  color: rgb(255, 255, 255);
+  font-size: 2.2rem;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+.navbar .menu-list {
+  display: inline-flex;
+}
+.navbar .menu-list li a {
+  margin-left: 7rem;
+  color: rgb(255, 255, 255);
+  font-family: var(--East_Sea_Dokdo);
+  font-size: 1.8rem;
+}
+.navbar .menu-list li a:hover {
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
+  font-weight: 600;
+  transition: 0.1s ease-in-out;
+}
+/*--------x------Navigation Bar----------x----*/
+
+/*--------------Banner--------------*/
+.banner {
+  background-image: url(../pexels-stas-knop-1626481.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #0000002d;
+}
+.banner .banner-content {
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  flex-wrap: wrap;
+}
+.banner-content h4,
+h1,
+h5 {
+  padding-top: 0.3rem;
+}
+h1 {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-family: var(--Kaushan_Script);
+  text-shadow: 1px 1px 5px rgb(229, 255, 0);
+}
+h4 {
+  font-size: 1.5rem;
+  color: white;
+  font-family: var(--Kaushan_Script);
+}
+h5 {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-family: var(--Abel);
+}
+.song-btn {
+  position: absolute;
+  top: 73%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+#icon {
+  border: 6px solid rgb(255, 255, 255);
+  border-radius: 5rem;
+  box-shadow: 1px 1px 20px rgb(255, 255, 255);
+  width: 80px;
+  cursor: pointer;
+}
+#icon:hover {
+  box-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+/*--------x------Banner----------x----*/
+
+.icon {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  display: none;
+}
+.icon.cancel-btn {
+  color: rgb(241, 96, 59);
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+/*-----view port-----*/
+@media (max-width: 1048px) {
+  .icon {
+    display: block;
+  }
+  .icon.hide {
+    display: none;
+  }
+  .navbar .menu-list {
+    position: fixed;
+    top: 0%;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    display: inline-block;
+    padding-top: 10rem;
+    text-align: center;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 99999;
+  }
+  .navbar .menu-list.active {
+    left: 0%;
+  }
+  .navbar .menu-list li {
+    margin-top: 2rem;
+  }
+  .navbar .menu-list li a {
+    color: rgb(10, 10, 10);
+    margin: auto;
+    font-family: var(--Poppins);
+    font-weight: 600;
+  }
+  .navbar .menu-list li a:hover {
+    color: white;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 5px rgb(247, 56, 56);
+    transition: 0.1s ease-in-out;
+  }
+  .song-btn {
+    position: absolute;
+    top: 73%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  #icon {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 5rem;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    width: 80px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 985px) {
+  .song-btn {
+    position: absolute;
+    top: 72%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  #icon {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 5rem;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    width: 70px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 720px) {
+  .song-btn {
+    position: absolute;
+    top: 87%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  #icon {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 5rem;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    width: 70px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 414px) {
+  .banner .banner-content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 70%;
+  }
+  .banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.329);
+  }
+  .song-btn {
+    position: absolute;
+    top: 73%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  #icon {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 5rem;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    width: 70px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 320px) {
+  .song-btn {
+    position: absolute;
+    top: 83%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  #icon {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 5rem;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    width: 60px;
+    cursor: pointer;
+  }
+}
+/*---x--view port--x---*/
