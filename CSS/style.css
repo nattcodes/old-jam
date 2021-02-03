@@ -206,7 +206,7 @@ h5 {
   width: 80px;
   cursor: pointer;
 }
-#icon:hover {
+#icon::focus {
   box-shadow: 1px 1px 10px rgb(0, 0, 0);
 }
 
